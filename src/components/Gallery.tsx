@@ -13,7 +13,7 @@ export function Gallery() {
       <Section
         id="gallery"
         title="Our Gallery"
-        subtitle="A few frames from our story. Replace these with your photos anytime."
+        subtitle="A few frames from our story."
       >
         <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
           {content.gallery.map((image, index) => (
