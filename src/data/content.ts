@@ -142,48 +142,49 @@ export const content: ContentConfig = {
       'Thank you for your laughter, your patience, your softness, and the way you make me feel safe being myself.',
       'I am so proud of us. Of how we began. Of how we keep choosing each other.',
       'Happy 2nd Monthsary. Here is to every memory still waiting for us.',
+      'I love you so much Love and I'm sorry for everything.'
     ],
     closing: 'Always yours,',
     signature: 'With all my love',
   },
 
   gallery: [
-    {
-      id: '1',
-      src: '/images/2.jpg',
-      alt: 'Soft pink flowers',
-      caption: 'A little softness for you',
-    },
-    {
-      id: '2',
-      src: '/images/3.jpg',
-      alt: 'Couple holding hands',
-      caption: 'Hand in hand',
-    },
-    {
-      id: '3',
-      src: '/images/4.jpg',
-      alt: 'Golden hour light',
-      caption: 'Golden hours with you',
-    },
-    {
-      id: '4',
-      src: '/images/5.jpg',
-      alt: 'Coffee and book',
-      caption: 'Quiet mornings',
-    },
-    {
-      id: '5',
-      src: '/images/6.jpg',
-      alt: 'Sunset sky',
-      caption: 'Sunsets we share',
-    },
-    {
-      id: '6',
-      src: '/images/1.jpg',
-      alt: 'Romantic path',
-      caption: 'Wherever we walk',
-    },
+   {
+    id: '1',
+    src: '/images/2.jpg',
+    alt: 'Our smiling moment together',
+    caption: 'Even after every fight, we still find reasons to smile. I love you. ❤️',
+  },
+   {
+  id: '2',
+  src: '/images/3.jpg',
+  alt: 'The most beautiful girl in my eyes',
+  caption: 'To me, you are the most beautiful girl in the universe. ❤️',
+  },
+   {
+  id: '3',
+  src: '/images/4.jpg',
+  alt: 'Supporting each other',
+  caption: 'I will always be here for you, supporting you in everything. ❤️',
+},
+{
+  id: '4',
+  src: '/images/5.jpg',
+  alt: 'Coffee date together',
+  caption: 'I can't wait to share more coffee dates and heartfelt conversations with you. ❤️',
+},
+{
+  id: '5',
+  src: '/images/6.jpg',
+  alt: 'Sunset together',
+  caption: 'Your proud boyfriend, always and forever. ❤️',
+},
+{
+  id: '6',
+  src: '/images/1.jpg',
+  alt: 'Our journey together',
+  caption: "I'll always be by your side, today, tomorrow, and until my very last breath. ❤️",
+},
   ],
 
   quotes: [
