@@ -142,7 +142,7 @@ export const content: ContentConfig = {
       'Thank you for your laughter, your patience, your softness, and the way you make me feel safe being myself.',
       'I am so proud of us. Of how we began. Of how we keep choosing each other.',
       'Happy 2nd Monthsary. Here is to every memory still waiting for us.',
-      'I love you so much Love and I'm sorry for everything.'
+      'I love you so much Love and I am sorry for everything.'
     ],
     closing: 'Always yours,',
     signature: 'With all my love',
@@ -171,7 +171,7 @@ export const content: ContentConfig = {
   id: '4',
   src: '/images/5.jpg',
   alt: 'Coffee date together',
-  caption: 'I can't wait to share more coffee dates and heartfelt conversations with you. ❤️',
+  caption: 'I cant wait to share more coffee dates and heartfelt conversations with you. ❤️',
 },
 {
   id: '5',
