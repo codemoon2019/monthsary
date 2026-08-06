@@ -175,7 +175,7 @@ export const content: ContentConfig = {
 },
 {
   id: '5',
-  src: '/images/6.jpg',
+  src: '/images/66.jpg',
   alt: 'Sunset together',
   caption: 'Your proud boyfriend, always and forever. ❤️',
 },
