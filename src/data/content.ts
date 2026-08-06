@@ -216,7 +216,7 @@ export const content: ContentConfig = {
 
   music: {
     src: '/music/oksihina.mp3',
-    title: 'Song the Describe my Love for You',
+    title: 'Love in a Song',
   },
 
   surprise: {
