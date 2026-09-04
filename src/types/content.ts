@@ -1,58 +1,30 @@
-export type MemoryIcon = 'heart' | 'message' | 'sunrise' | 'laugh' | 'moon' | 'sparkles'
-
-export interface Memory {
-  id: string
-  date: string
-  title: string
-  description: string
-  icon: MemoryIcon
-}
-
-export interface Reason {
-  id: string
-  title: string
-  description: string
-}
-
-export interface GalleryImage {
-  id: string
-  src: string
-  alt: string
-  caption?: string
-}
-
-export interface Quote {
-  id: string
-  text: string
-  author?: string
+export interface PoemStanza {
+  lines: string[]
 }
 
 export interface ContentConfig {
-  girlfriendName: string
-  monthsaryDate: string
-  relationshipStartDate: string
-  hero: {
+  title: string
+  monthsaryDateLabel: string
+  dedication: string
+  poem: {
     title: string
-    subtitle: string
-    cta: string
+    stanzas: PoemStanza[]
   }
-  memories: Memory[]
-  reasons: Reason[]
-  loveLetter: {
-    greeting: string
-    lines: string[]
-    closing: string
-    signature: string
-  }
-  gallery: GalleryImage[]
-  quotes: Quote[]
   music: {
     src: string
     title: string
   }
-  surprise: {
-    buttonLabel: string
-    message: string[]
+  closing: {
+    signature: string
   }
-  footer: string
+  moment: {
+    caption: string
+    gifSrc: string
+  }
+  blog: {
+    title: string
+    date: string
+    lede: string
+    paragraphs: string[]
+  }
 }

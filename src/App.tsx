@@ -1,35 +1,50 @@
-import { Hero } from './components/Hero'
-import { Timeline } from './components/Timeline'
-import { Reasons } from './components/Reasons'
-import { Gallery } from './components/Gallery'
-import { LoveLetter } from './components/LoveLetter'
-import { Counter } from './components/Counter'
-import { MusicPlayer } from './components/MusicPlayer'
-import { Quotes } from './components/Quotes'
-import { Surprise } from './components/Surprise'
-import { Footer } from './components/Footer'
+import { useCallback, useRef, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { RomanticAtmosphere } from './components/ui/RomanticAtmosphere'
+import { LetterIntro } from './components/LetterIntro'
+import { Notebook } from './components/Notebook'
+import { Blog } from './components/Blog'
+import { MusicPlayer, type MusicPlayerHandle } from './components/MusicPlayer'
+import { usePrefersReducedMotion } from './hooks/usePrefersReducedMotion'
 
 function App() {
+  const reduced = usePrefersReducedMotion()
+  const [opened, setOpened] = useState(reduced)
+  const [page, setPage] = useState<'letter' | 'blog'>('letter')
+  const musicRef = useRef<MusicPlayerHandle>(null)
+
+  const startMusic = useCallback(() => {
+    void musicRef.current?.play()
+  }, [])
+
+  const finishIntro = useCallback(() => setOpened(true), [])
+
   return (
-    <div className="bg-page min-h-dvh">
-      <a
-        href="#timeline"
-        className="absolute left-4 top-4 z-50 -translate-y-16 rounded-full bg-white px-4 py-2 text-sm text-ink shadow transition focus:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blush"
-      >
-        Skip to content
-      </a>
-      <main>
-        <Hero />
-        <Timeline />
-        <Reasons />
-        <Gallery />
-        <LoveLetter />
-        <Counter />
-        <Quotes />
-        <Surprise />
+    <div className="bg-page relative min-h-dvh overflow-hidden">
+      <RomanticAtmosphere />
+      <main className="relative z-10">
+        <AnimatePresence>
+          {!opened && (
+            <LetterIntro onOpen={startMusic} onComplete={finishIntro} />
+          )}
+        </AnimatePresence>
+        {page === 'blog' ? (
+          <Blog onBack={() => setPage('letter')} />
+        ) : (
+          <motion.div
+            initial={reduced ? false : { opacity: 0, y: 28, scale: 0.92 }}
+            animate={
+              opened
+                ? { opacity: 1, y: 0, scale: 1 }
+                : { opacity: 0, y: 28, scale: 0.92 }
+            }
+            transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <Notebook onOpenBlog={() => setPage('blog')} />
+          </motion.div>
+        )}
       </main>
-      <Footer />
-      <MusicPlayer />
+      <MusicPlayer ref={musicRef} visible={opened} />
     </div>
   )
 }

@@ -1,6 +1,6 @@
-# Happy 2nd Monthsary
+# Para sa'yo, Mahal
 
-A premium one-page digital love letter built with React, Vite, Tailwind CSS, and Framer Motion.
+A one-page digital love letter for our 2nd monthsary.
 
 ## Quick start
 
@@ -16,7 +16,7 @@ npm run build
 npm run preview
 ```
 
-Deploy the `dist` folder to [Vercel](https://vercel.com) — no extra configuration required.
+Deploy to [Vercel](https://vercel.com) — `vercel.json` is already set up for the Vite SPA.
 
 ## Personalize
 
@@ -24,26 +24,19 @@ Edit **one file** to customize everything:
 
 [`src/data/content.ts`](src/data/content.ts)
 
-- Girlfriend's name
-- Monthsary date (`2026-08-07`)
-- Relationship start date (`2026-06-07`)
-- Memories, reasons, letter, quotes
-- Gallery image URLs
+- Poem title and stanzas
+- Monthsary date and relationship start date
+- Intro dedication
+- Story moments
+- Love letter
+- Photo paths and captions
 - Music path and title
+- Final message
 
 ### Music
 
-1. Add your MP3 to `public/music/song.mp3`
-2. Or change `music.src` in `src/data/content.ts`
+The player uses `public/music/oksihina.mp3`. Change `music.src` or replace the file. Playback never autoplays.
 
-Playback never autoplays — play/pause only.
+### Photos
 
-### Gallery photos
-
-Replace the Unsplash URLs in `content.gallery` with your own paths, for example:
-
-```ts
-src: '/images/our-first-date.jpg'
-```
-
-Put local files in `public/images/`.
+Images live in `public/images/` and are referenced from `content.gallery`.
