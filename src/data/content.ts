@@ -55,8 +55,8 @@ export const content: ContentConfig = {
   },
 
   music: {
-    src: '/music/myheart.mp3?v=2',
-    title: 'My Heart',
+    src: '/music/tugon.mp3',
+    title: 'Tugon',
   },
 
   closing: {
