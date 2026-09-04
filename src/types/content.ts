@@ -21,10 +21,4 @@ export interface ContentConfig {
     caption: string
     gifSrc: string
   }
-  blog: {
-    title: string
-    date: string
-    lede: string
-    paragraphs: string[]
-  }
 }

@@ -3,14 +3,12 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { RomanticAtmosphere } from './components/ui/RomanticAtmosphere'
 import { LetterIntro } from './components/LetterIntro'
 import { Notebook } from './components/Notebook'
-import { Blog } from './components/Blog'
 import { MusicPlayer, type MusicPlayerHandle } from './components/MusicPlayer'
 import { usePrefersReducedMotion } from './hooks/usePrefersReducedMotion'
 
 function App() {
   const reduced = usePrefersReducedMotion()
   const [opened, setOpened] = useState(reduced)
-  const [page, setPage] = useState<'letter' | 'blog'>('letter')
   const musicRef = useRef<MusicPlayerHandle>(null)
 
   const startMusic = useCallback(() => {
@@ -28,21 +26,17 @@ function App() {
             <LetterIntro onOpen={startMusic} onComplete={finishIntro} />
           )}
         </AnimatePresence>
-        {page === 'blog' ? (
-          <Blog onBack={() => setPage('letter')} />
-        ) : (
-          <motion.div
-            initial={reduced ? false : { opacity: 0, y: 28, scale: 0.92 }}
-            animate={
-              opened
-                ? { opacity: 1, y: 0, scale: 1 }
-                : { opacity: 0, y: 28, scale: 0.92 }
-            }
-            transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <Notebook onOpenBlog={() => setPage('blog')} />
-          </motion.div>
-        )}
+        <motion.div
+          initial={reduced ? false : { opacity: 0, y: 28, scale: 0.92 }}
+          animate={
+            opened
+              ? { opacity: 1, y: 0, scale: 1 }
+              : { opacity: 0, y: 28, scale: 0.92 }
+          }
+          transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <Notebook />
+        </motion.div>
       </main>
       <MusicPlayer ref={musicRef} visible={opened} />
     </div>

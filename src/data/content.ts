@@ -67,17 +67,4 @@ export const content: ContentConfig = {
     caption: 'I love you so much',
     gifSrc: '/gif/lovegif.gif',
   },
-
-  blog: {
-    title: 'The AI Age',
-    date: 'September 2026',
-    lede:
-      'We are living in a time when machines can write, draw, and dream beside us — and the most human thing we can do is stay kind.',
-    paragraphs: [
-      'The AI Age did not arrive with a single invention. It arrived quietly: in the way we search, the way we work, and even the way two people can find each other across a glowing screen.',
-      'What makes this era strange is not that computers became clever. It is that they began to sound like us. They can finish a sentence, sketch a cloud, or hold a conversation at midnight. Used well, they give us time. Used carelessly, they can make the world feel copied.',
-      'I do not think the point of this age is to replace the heart. The point is to keep choosing what only a person can give: patience, a real laugh, a letter written because someone matters.',
-      'Technology was the bridge that led me to you. In a century full of noise and possibility, that still feels like the most beautiful use of it — not to become more machine, but to find the one soul we would never want to lose.',
-    ],
-  },
 }

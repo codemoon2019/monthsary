@@ -325,7 +325,7 @@ function PageFace({ page, active }: { page: NotebookPage; active: boolean }) {
   return <StanzaFace lines={page.lines ?? []} active={active} />
 }
 
-export function Notebook({ onOpenBlog }: { onOpenBlog: () => void }) {
+export function Notebook() {
   const reduced = usePrefersReducedMotion()
   const pages = useMemo<NotebookPage[]>(
     () => [
@@ -491,13 +491,6 @@ export function Notebook({ onOpenBlog }: { onOpenBlog: () => void }) {
             <ChevronRight size={26} strokeWidth={2.6} />
           </motion.button>
         </div>
-        <button
-          type="button"
-          onClick={onOpenBlog}
-          className="font-display text-sm text-burgundy underline decoration-rose/50 underline-offset-4"
-        >
-          Read: The AI Age
-        </button>
       </div>
     </section>
   )
